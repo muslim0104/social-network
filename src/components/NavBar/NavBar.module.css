@@ -1,0 +1,85 @@
+.nav{
+    display: inline-flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    height: 70px;
+
+    background-color: #c22a2a;
+
+
+}
+.nav_bar  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+
+margin: 0 auto;
+
+
+
+
+}
+
+.nav_bar a {
+
+ text-align: center;
+padding: 100px;
+text-decoration: none;
+
+  color: white;
+    font-size: 18px;
+margin: 34px;
+
+
+
+
+
+
+
+}
+
+.nav_img{
+    display: flex;
+    width: 40px;
+    padding: 15px;
+position: fixed;
+    left: 0px;
+    animation: 3s linear 0s normal none infinite running rot;
+    -webkit-animation: 2s linear 0s normal none infinite running rot;
+
+    opacity: 22%;
+    animation-name: rot;
+}
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+ a.active{
+opacity: 40%;
+     animation-name:nav-animation ;
+     animation-duration:0.5s ;
+}
+ @keyframes nav-animation {
+   0%{
+       opacity: 100%;
+   }
+     100%{
+         opacity: 40%;
+     }
+ }
