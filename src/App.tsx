@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Header} from "./components/Header/Header";
+import {NavBar} from "./components/NavBar/NavBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Route, Switch} from "react-router-dom";
+import Settings from "./components/Settings/Settings";
+import Music from "./components/Music/Music";
+import News from "./components/News/News";
+import Friends from "./components/Friends/Friends";
+import { store} from "./redux-store";
+import ProfileContainer from "./components/Profile/ProfileContainer";
+import DialogContainer from "./components/DialogContainer";
+import UsersContainer from "./components/Users/UsersContainer";
+
+type AppPropsType = {
+}
+
+
+function App(props: AppPropsType) {
+    return (
+        <div className="app-wrapper">
+
+                <Header/>
+                <NavBar/>
+                <Friends friends={store.getState().friendsPage }/>
+
+
+                <Switch>
+               <Route render={()=> <ProfileContainer/>  } exact path={'/profile'} />
+                    <Route render={() => <DialogContainer />}  exact path={'/dialogs'}/>
+                    <Route render={() => <UsersContainer/>} exact  path={'/users'}/>
+                    <Route render={() => <Settings/>}  exact path={'/settings'}/>
+                    <Route render={() => <Music/>}  exact path={'/music'}/>
+                    <Route render={() => <News/>} exact  path={'/news'}/>
+
+                </Switch>
+
+
+
+        </div>
+    );
 }
 
 export default App;

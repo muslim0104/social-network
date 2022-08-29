@@ -1,0 +1,58 @@
+
+
+
+.message{
+    background-color: white;
+    width: 200px;
+    height: 50px;
+   margin: 15px auto;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.message span{
+    font-size: 16px;
+
+}
+
+.message h5{
+    font-size: 15px;
+  margin: 0 15px 15px 0;
+    color: gray;
+}
+
+.name_block {
+display: block;
+background-color: white;
+    height: 56px;
+    width: 100px
+
+
+}
+.name_block div{
+
+}
+
+.btn_style button {
+    border: 0;
+    width: 120px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    border-radius:8px ;
+
+}
+.btn_style{
+    margin: 5px;
+}
+
+
+
+
+
+
+
+.active{
+    color: gray;
+}
+
