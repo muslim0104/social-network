@@ -2,6 +2,7 @@ import React from "react";
 import classes from './Profile.module.css'
 import {store} from "../../redux-store";
 import {ProfileContainerPropsType} from "./ProfileContainer";
+import {NavLink} from "react-router-dom";
 
 
 export const Profile = (props: ProfileContainerPropsType): any => {
@@ -30,6 +31,7 @@ export const Profile = (props: ProfileContainerPropsType): any => {
 
             <div className={classes.image_flex}>
                 <img src='https://images8.alphacoders.com/114/1143850.jpg' className={classes.image}/>
+
 
             </div>
 

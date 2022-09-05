@@ -27,7 +27,7 @@ function App(props: AppPropsType) {
 
 
                 <Switch>
-               <Route render={()=> <ProfileContainer/>  } exact path={'/profile'} />
+               <Route render={()=> <ProfileContainer/>  }  path={'/profile/:userId'} />
                     <Route render={() => <DialogContainer />}  exact path={'/dialogs'}/>
                     <Route render={() => <UsersContainer/>} exact  path={'/users'}/>
                     <Route render={() => <Settings/>}  exact path={'/settings'}/>
